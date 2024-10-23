@@ -33,33 +33,35 @@ fun PlayActivity(){
     Column(modifier = Modifier.fillMaxSize()) {
         HeaderSection()
         Text(text = "Kepada Yth,", modifier = Modifier.padding(16.dp))
-        Text(text = "Tiara Hasna")
+        Text(text = "Tiara Hasna,", modifier = Modifier.padding(start = 16.dp))
         Spacer(modifier = Modifier.size(50.dp))
         DetailSurat(
             judul = "Nama",
-            isinya = "Maman Alkatiri\"\n"+
-        )\n"+
+            isinya = "Maman Alkatiri"
+        )
 
         DetailSurat(
-            judul = "Kepentingan",
-            isinya = "DetailSurat(\n" +
-            " judul = \"Nama\",\n" +
-            " isinya = \"Maman Alkatiri\"\n"+
-            ")\n"+
-
+            judul = "No Telp",
+            isinya = "0813245632123"
+        )
         DetailSurat(
             judul = "Alamat",
             isinya = "Kota Bandung, Jawa Barat"
         )
-
         DetailSurat(
-            judul = " No Telp",
-            isinya = " 081236541236"
+            judul = "Kepentingan",
+            isinya = "DetailSurat(\n" +
+                    "             judul = \"Nama\",\n" +
+                    "             isinya = \"Maman Alkatiri\"\n" +
+                    "         )\n" +
+                    " DetailSurat(\n" +
+                    "             judul = \"Alamat\",\n" +
+                    "             isinya = \"Kota Bandung,Jawa Barat,\"\n" +
+                    " DetailSurat(\n" +
+                    "             judul = \"No Telp\",\n" +
+                    "             isinya = \"0813274563123\"\n" +
+                    "   )"
         )
-
-
-        )
-
     }
 }
 
@@ -98,7 +100,9 @@ fun HeaderSection() {
 }
 
 @Composable
-fun DetailSurat(){
+fun DetailSurat(
+    judul: String, isinya: String
+){
     Column (modifier = Modifier
         .fillMaxWidth()
         .padding(16.dp),
